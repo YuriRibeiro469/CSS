@@ -1,0 +1,132 @@
+# CSS - Guia Introdutório
+
+## O que é CSS?
+
+CSS é a sigla para *Cascading Style Sheets* (Folhas de Estilo em Cascata).
+
+É uma linguagem de **estilização**, e não de programação.  
+O CSS é usado para definir a aparência visual de uma página web, como cores, fontes, espaçamentos, bordas e layout.
+
+---
+
+## Formas de Adicionar CSS
+
+- **CSS Inline**: Adicionado diretamente no elemento HTML.  
+  Exemplo:
+  
+  ```html
+  <p style="color: red;">Texto</p>
+  ```
+   ⚠️ Má prática — aumenta o tamanho do código e dificulta a manutenção.
+  
+- **CSS Interno**: Inserido no próprio arquivo HTML, dentro da tag <style>.
+  Exemplo:
+```html
+  <style>
+    p {
+      color: blue;
+    }
+  </style>
+```
+  - **CSS Externo**:Importado de um arquivo separado .css usando a tag <link>.
+  Exemplo:
+```html
+  <link rel="stylesheet" href="style.css">
+```
+
+## CSS Selectors
+
+Exemplo:
+```css
+p {
+  color: red;
+  border: 1px solid blue;
+}
+```
+- `p` → seletor (tag HTML)
+- `color, border` → propriedades
+- `red, solid` → valores
+
+⚠️ Quando estilizamos uma tag diretamente (como `p`), o estilo se aplica a **todas** as tags iguais na página.
+
+Selecionando elementos específicos:
+
+- Usando **classes**: Para estilizar vários elementos.
+  Exemplo:
+  ```css
+  .caixa { color: green; }
+  ````
+
+- Usando **ID**: Para estilizar um único elemento.
+  Exemplo:
+  ```css
+  #titulo { font-size: 24px; }
+  ````
+
+Quando usar?
+
+- Use **`class`** quando for aplicar o estilo em vários elementos.
+- Use **`ID`** quando o estilo for aplicado em apenas um elemento.
+
+## Cores no CSS
+
+- Nome da cor: `black`, `blueviolet`,` white`, etc.
+- Hexadecimal: `#fff`,`#000`, `#616161`, etc.
+- RGB: `rgb(255, 255, 255)`
+- RGBA: `rgba(0, 0, 255, 0.5)`
+
+## Manipulação de Fontes
+
+
+```css
+font-family: Arial, Helvetica, sans-serif;   → Define a família da fonte
+font-size: 16px;                             → Define o tamanho da fonte
+font-weight: 100;                            → Define a espessura da fonte
+```
+### Fontes externas (Google Fonts):
+
+- Usando `<link>`:
+ ```html
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+```
+- Usando `@import`:
+```css
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+```
+## Padding, Margin e Border
+
+- Padding: Espaçamento **dentro** do conteúdo.
+- Margin: Espaçamento **fora** do conteúdo.
+- Border: Define a **borda** do conteúdo.
+
+## Propriedade position
+
+Define como um elemento é posicionado na página.
+
+- **`static`** (padrão):
+  - → O elemento segue o fluxo normal da página.
+  - → Propriedades `top`, `bottom`, `right` e `left` **não** se aplicam.
+
+- **`relative`**:
+  - → O elemento é posicionado em relação à sua posição original.
+  - → Propriedades `top`, `bottom`, `right` e `left` são aplicáveis.
+
+- **`absolute`**:
+  - → Posiciona o elemento em relação ao primeiro pai com `position: relative`.
+  - → Se nenhum pai tiver `position: relative`, será posicionado em relação ao `<body>`.
+
+- **`fixed`**:
+  - → O elemento é fixo na tela (viewport), mesmo com rolagem.
+  - → Propriedades `top`, `bottom`, `right` e `left` são aplicáveis.
+
+- **`sticky`**:
+  - → Fica fixo quando atinge determinada posição no scroll.
+  - → Propriedades `top`, `bottom`, `right` e `left` são aplicáveis.
+  
+   ## Pseudo-classes
+
+- `:first-child` → Seleciona o **primeiro filho** de um elemento.
+- `:last-child` → Seleciona o **último filho** de um elemento.
+- `:nth-child(n)` → Seleciona o **n-ésimo filho**.
+
+
