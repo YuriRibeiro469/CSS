@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonte externa importada do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <title>Curso CSS</title>
+
+  <!-- CSS Externo (arquivo separado) -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- CSS Interno (dentro do próprio HTML) -->
+  <style>
+    h2 {
+      color: blueviolet;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Barra de navegação com classe para estilização -->
+  <nav class="navBar">
+    <h1>Barra de navegação</h1>
+  </nav>
+
+  <!-- CSS Inline (estilização diretamente no elemento - má prática) -->
+  <h1 style="color: red;">Hello World!</h1>
+
+  <!-- Exemplo de uso de CSS interno (h2 estilizado no <style>) -->
+  <h2>Hello World!</h2>
+
+  <!-- Estilizado no CSS externo -->
+  <h3>Hello World</h3>
+
+  <!-- Classe: pode ser usada em vários elementos -->
+  <h4 class="paragrafo">parágrafo com class</h4>
+
+  <!-- ID: deve ser único na página -->
+  <h5 id="paragrafo">parágrafo com ID</h5>
+
+  <!-- Vários elementos com a mesma classe -->
+  <h6 class="cor">H6</h6>
+  <h6 class="cor">H6</h6>
+
+  <!-- Elementos com diferentes classes -->
+  <p class="ab">ab</p>
+  <p class="bc">bc</p>
+  <p class="cd">cd</p>
+
+  <!-- Div com classe container para aplicar layout e espaçamentos -->
+  <div class="container">
+    <h1>Hello World!</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sit quod placeat, suscipit accusantium amet
+      porro obcaecati maxime sequi consectetur numquam veniam ullam, facilis perferendis alias ex ut vel illum!</p>
+  </div>
+
+  <!-- Bloco lateral com links de redes sociais -->
+  <aside class="redes">
+    <h2>Redes Sociais</h2>
+    <ul>
+      <li><a href="https://gmail.com/">Gmail</a></li>
+      <li><a href="https://youtube.com">YouTube</a></li>
+      <li><a href="https://instagram.com">Instagram</a></li>
+    </ul>
+  </aside>
+
+  <!-- Formulário de cadastro com campos de entrada -->
+  <div class="box">
+    <form action="form.php" method="POST" class="form">
+
+      <!-- Campo nome -->
+      <div class="formGroup">
+        <label for="nome">Primeiro nome:</label>
+        <input type="text" id="nome" placeholder="Digite seu nome">
+      </div>
+
+      <!-- Campo email -->
+      <div class="formGroup">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Digite seu email">
+      </div>
+
+      <!-- Campo mensagem (textarea) -->
+      <div class="formGroup">
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4" cols="50"></textarea>
+      </div>
+
+      <!-- Botão de envio -->
+      <input type="submit" value="Enviar" class="button">
+    </form>
+  </div>
+
+  <!-- Exemplo de uso da propriedade position com relative e absolute -->
+  <div class="box relative"> <!-- Duas classes aplicadas -->
+    <div class="absolute">
+      <h1>Hello World!</h1>
+    </div>
+  </div>
+
+  <!-- Botão fixo na tela, mesmo com rolagem -->
+  <button class="fixedButton">FIXED</button>
+
+  <!-- Lista de categorias com pseudo-classes para elementos pares e ímpares -->
+  <div class="box categories">
+    <h2>Categorias</h2>
+    <ul>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Lorem ipsum dolor sit amet.</li>
+    </ul>
+  </div>
+</body>
+
+</html>

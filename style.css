@@ -1,0 +1,212 @@
+/* Importação de fonte externa do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Regra universal que aplica box-sizing: border-box a todos os elementos da página.
+   Isso faz com que o padding e a borda sejam incluídos no cálculo total da largura/altura dos elementos. */
+* {
+  box-sizing: border-box;
+}
+
+/* Estilização do corpo da página (body):
+   Define a fonte padrão, tamanho e peso da fonte. */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+}
+
+/* Estilização para a tag h3 */
+h3 {
+  color: brown;
+}
+
+/* Classe (.paragrafo): 
+   Aplica estilo a todos os elementos com essa classe. */
+.paragrafo {
+  color: blueviolet;
+}
+
+/* ID (#paragrafo): 
+   Aplica estilo a um elemento com o ID "paragrafo". */
+#paragrafo {
+  color: chocolate;
+}
+
+/* Estilo aplicado a todos os elementos h6 */
+h6 {
+  color: chartreuse;
+}
+
+/* Estilização de várias tags (ab, bc, cd) ao mesmo tempo */
+ab,
+bc,
+cd {
+  color: aqua;
+}
+
+/* Estilização de uma div com a classe .container */
+.container {
+  background-color: black; /* Cor de fundo da div */
+  color: antiquewhite; /* Cor do texto */
+  width: 80%; /* Largura da div */
+  box-sizing: border-box; /* Inclui bordas e padding no cálculo do tamanho */
+
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  /* Mesma coisa que acima */
+  padding: 20px; /* Espaçamento interno em todos os lados (acima, abaixo, esquerda e direita) */
+
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  /* Mesma coisa que acima */
+  margin: auto; /* Centraliza a div horizontalmente */
+
+  border-top: 3px solid red;
+  border-left: 3px solid red;
+  border-right: 3px solid red;
+  border-bottom: 3px solid red;
+  /* Mesma coisa que acima */
+  border: 3px solid red; /* Borda vermelha de 3px em todos os lados */
+}
+
+/* Estilização de títulos dentro da seção .redes */
+.redes h2 {
+  text-align: center;
+}
+
+/* Efeito hover: ao passar o mouse sobre o h2 dentro de .redes */
+.redes h2:hover {
+  color: black;
+  cursor: pointer;
+}
+
+/* Lista de links dentro da seção .redes */
+.redes ul {
+  list-style: none; /* Remove marcadores da lista */
+  text-align: center;
+  padding: 0;
+}
+
+/* Links padrão dentro da lista */
+.redes ul a {
+  text-decoration: none; /* Remove sublinhado dos links */
+  color: black;
+}
+
+/* Cor muda ao passar o mouse sobre o link */
+.redes ul a:hover {
+  color: blueviolet;
+}
+
+/* Cor para links que já foram visitados */
+.redes ul a:visited {
+  color: antiquewhite;
+}
+
+/* Container do formulário */
+.box {
+  width: 80%;
+  margin: auto;
+}
+
+/* Padding à esquerda para alinhar o conteúdo do formulário */
+.form {
+  padding-left: 20px;
+}
+
+/* Espaço inferior entre os campos do formulário */
+.formGroup {
+  margin-bottom: 10px;
+}
+
+/* Input do formulário ocupa toda a largura e tem margem */
+.form .formGroup input {
+  margin: 10px;
+  width: 100%;
+}
+
+/* Labels exibidos em bloco, cada um em uma linha */
+.form .formGroup label {
+  display: block;
+}
+
+/* Botão com estilo personalizado */
+.button {
+  padding: 10px;
+  color: black;
+  border: 1px solid blueviolet;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+/* Container com posição relativa para usar elementos posicionados dentro dele */
+.relative {
+  position: relative;
+  border: 3px solid black;
+  height: 500px;
+}
+
+/* Elemento posicionado de forma absoluta em relação ao container pai */
+.relative .absolute {
+  position: absolute;
+  bottom: 0; /* Fixa no rodapé da div pai */
+}
+
+/* Remove margem de h1 dentro da div .absolute */
+.relative .absolute h1 {
+  margin: 0;
+}
+
+/* Barra de navegação fixa no topo durante o scroll */
+.navBar {
+  background-color: black;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 10px;
+  position: sticky;
+  top: 0;
+}
+
+/* Botão fixo na parte inferior direita da tela */
+.fixedButton {
+  background-color: black;
+  color: aliceblue;
+  border-radius: 10px;
+  border: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+}
+
+/* Lista de categorias */
+.categories ul {
+  list-style: none;
+}
+
+/* Elementos pares da lista (2º, 4º, 6º, etc.) */
+.categories ul li:nth-child(even) {
+  color: red;
+}
+
+/* Elementos ímpares da lista (1º, 3º, 5º, etc.) */
+.categories ul li:nth-child(odd) {
+  color: blue;
+}
+
+/* Comentado: exemplos de pseudo-classes para primeiro, último e terceiro item da lista
+.categories ul li:first-child {
+  color: brown;
+}
+.categories ul li:last-child {
+  color: blue;
+}
+.categories ul li:nth-child(3) {
+  color: aquamarine;
+}
+*/
